@@ -43,11 +43,6 @@
                             }
                         },
                         {
-                            "filter": {
-                                "param": "time_brush"
-                            }
-                        },
-                        {
                             "aggregate": [
                                 {
                                     "op": "sum",
@@ -95,6 +90,7 @@
         {
             "width": 800,
             "height": 400,
+            "title": "Total permanent international arrivals into Australia over time",
             "data": {
                 "url": "migration_reason.csv"
             },
@@ -151,9 +147,15 @@
                     "encoding": {
                         "x": {
                             "field": "year",
+                            "timeunit": "year",
                             "type": "ordinal",
                             "axis": {
                                 "title": "Year"
+                            },
+                            "scale": {
+                                "domain": {
+                                    "param": "time_brush"
+                                }
                             }
                         },
                         "y": {
