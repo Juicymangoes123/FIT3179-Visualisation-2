@@ -129,7 +129,7 @@
             "height": 400,
             "data": {
                 "url": "migration_reason.csv"
-            },
+            }, 
             "params": [
                 {
                     "name": "state_selection",
