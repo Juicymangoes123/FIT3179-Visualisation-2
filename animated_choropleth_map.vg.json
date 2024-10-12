@@ -2,18 +2,18 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 800,
     "height": 450,
-    "title": "askdjfls",
+    "title": "abcdef",
     "projection": {
         "type": "equirectangular"
     },
     "params": [
         {
-            "name": "year_time_slider",
+            "name": "slider",
             "value": 2010,
             "bind": {
                 "input": "range",
                 "min": 2004,
-                "max": 2022,
+                "max": 2025,
                 "step": 1,
                 "name": "Year"
             }
@@ -33,25 +33,20 @@
                     "lookup": "properties.name",
                     "from": {
                         "data": {
-                            "url": "overseas_migration_view.csv"
+                            "url": "overseas_migration.csv"
                         },
-                        "key": "state",
+                        "key": "State",
                         "fields": [
-                            "mig_year",
+                            "State",
+                            "percentage",
+                            "year",
                             "net_overseas_migration",
                             "Australian_total"
                         ]
                     }
                 },
                 {
-                    "calculate": "toNumber(datum.mig_year)",
-                    "as": "num_year"
-                },                
-                {
-                    "filter": {
-                        "field": "num_year",
-                        "equal": {"expr": "year_time_slider"}
-                    }
+                    "filter": "datum.year==slider"
                 }
             ],
             "mark": {
@@ -59,15 +54,15 @@
             },
             "encoding": {
                 "color": {
-                    "field": "net_overseas_migration",
+                    "field": "percentage",
                     "type": "quantitative",
                     "scale": {
                         "type": "threshold",
                         "domain": [
-                            5,
-                            10,
-                            20,
-                            30
+                            0.05,
+                            0.10,
+                            0.20,
+                            0.30
                         ],
                         "range": [
                             "#81d484",
@@ -80,15 +75,15 @@
                 },
                 "tooltip": [
                     {
-                        "field": "net_overseas_migration",
+                        "field": "percentage",
                         "type": "quantitative"
                     },
                     {
-                        "field": "state",
+                        "field": "State",
                         "type": "nominal"
                     },
                     {
-                        "field": "mig_year",
+                        "field": "year",
                         "type": "ordinal"
                     }
                 ]
