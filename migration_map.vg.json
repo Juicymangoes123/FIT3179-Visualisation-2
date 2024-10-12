@@ -33,12 +33,12 @@
                     },
                     "transform": [
                         {
-                            "lookup": "properties.name",
+                            "lookup": "net_overseas_migration",
                             "from": {
                                 "data": {
                                     "url": "overseas_migration.csv"
                                 },
-                                "key": "state",
+                                "key": "State",
                                 "fields": ["year", "net_overseas_migration",  "state"]
                             }
                         },
@@ -96,7 +96,7 @@
             },
             "transform": [
                 {
-                    "filter": "datum.state=='Australia' && datum.reason=='total'"
+                    "filter": "datum.State=='Australia' && datum.reason=='total'"
                 }
             ],
             "mark": {
