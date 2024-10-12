@@ -1,4 +1,0 @@
-{
-    "calculate": "datum.net_overseas_migration/datum.Australian_total * 100",
-    "as": "% of annual national migration"
-}
