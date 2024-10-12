@@ -14,10 +14,16 @@
 
 <body>
 
-   <p id="title"> Patterns of migration in Australia </p>
+     <p id="title"> Patterns of migration in Australia </p>
 
-    <div id="line_graph"></div>
+     <div id="animated_choropleth_map"></div>
 
+   <script type="text/javascript">
+        var spec4 = "animated_choropleth_map.vg.json";
+        vegaEmbed("#animated_choropleth_map", spec4).then(function(results) {}).catch(console.error);
+   </script>
+
+   <div id="line_graph"></div>
    <script type="text/javascript">
         var spec = "line_graph.vg.json";
         vegaEmbed("#line_graph", spec).then(function(results) {}).catch(console.error);
