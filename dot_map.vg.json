@@ -20,6 +20,64 @@
                 "fill": "lightgray",
                 "stroke": "white"
             }
+        },
+        {
+            "data": {
+                "url": "sa4_enrolment.csv",
+                "format": {
+                    "type": "csv"
+                }
+            },
+            "params": [
+                {
+                    "name": "grid",
+                    "select": "interval",
+                    "bind": "scales"
+                }
+            ],
+            "transform": [
+                {
+                    "lookup": "SA4_NAME_2021",
+                    "from": {
+                        "data": {
+                            "url": "sa4_2016.csv"
+                        },
+                        "key": "SA4_NAME",
+                        "fields": ["latitude", "longitude"]
+                    }
+                },
+                {
+                    "filter": "datum.Year==2021"
+                }
+            ],
+            "mark": {
+                "type": "circle",
+                "opacity": 1
+            },
+            "encoding": {
+                "longitude": {
+                    "field": "longitude",
+                    "type": "quantitative"
+                },
+                "latitude": {
+                    "field": "latitude",
+                    "type": "quantitative"
+                },
+                "size": {
+                    "field": "Commencement",
+                    "type": "quantitative"
+                },
+                "tooltip": [
+                    {
+                        "field": "SA4_NAME_2021",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Year",
+                        "type": "ordinal"
+                    }
+                ]
+            }
         }
     ]
 }
