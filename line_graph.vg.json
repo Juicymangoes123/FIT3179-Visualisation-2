@@ -30,7 +30,7 @@
             },
             "transform": [
                 {
-                    "filter": "!state_selection || datum.state == state_selection"
+                    "filter": "!state_selection || datum.State == state_selection"
                 }
             ],
             "layer": [
@@ -152,7 +152,7 @@
                     "mark": "bar",
                     "transform": [
                         {
-                            "filter": "!state_selection || datum.state==state_selection"
+                            "filter": "!state_selection || datum.State==state_selection"
                         },
                         {
                             "filter": {
@@ -177,7 +177,8 @@
                         },
                         "y": {
                             "field": "amount",
-                            "type": "quantitative"
+                            "type": "quantitative",
+                            "title": ""
                         },
                         "color": {
                             "field": "reason",
