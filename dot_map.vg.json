@@ -3,8 +3,41 @@
     "width": 800,
     "height": 450,
     "title": "dot map sa4",
+    "params": [
+        {
+            "name": "zoom_level",
+            "value": 10000,
+            "bind": {
+                "input": "range",
+                "min": 3500,
+                "max": 30000,
+                "step": 100,
+                "name": "Zoom: "
+            }
+        },
+        {
+            "name": "center_to",
+            "value": [145,-37.95],
+            "bind": {
+                "input": "select",
+                "options": [
+                    [145, -37.95],
+                    [151, -33.5],
+                    [153, -27.55]
+                ],
+                "labels": [
+                    "Melbourne CBD",
+                    "Sydney CBD",
+                    "Brisbane CBD"
+                ],
+                "name": "Centre to: "
+            }
+        }
+    ],
     "projection": {
-        "type": "equirectangular"
+        "type": "equirectangular",
+        "center": {"expr": "center_to"},
+        "scale": {"expr": "zoom_level"}
     },
     "layer": [
         {
@@ -48,11 +81,14 @@
                 },
                 {
                     "filter": "datum.Year==2021"
+                },
+                {
+                    "filter": "datum.Commencement>301"
                 }
             ],
             "mark": {
-                "type": "circle",
-                "opacity": 1
+                "type": "point",
+                "opacity": 0.2
             },
             "encoding": {
                 "longitude": {
@@ -75,6 +111,10 @@
                     {
                         "field": "Year",
                         "type": "ordinal"
+                    },
+                    {
+                        "field": "Commencement",
+                        "type": "quantitative"
                     }
                 ]
             }
