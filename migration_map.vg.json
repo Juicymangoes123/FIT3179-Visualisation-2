@@ -123,55 +123,6 @@
                     }
                 }
             ]
-        },
-        {
-            "width": 800,
-            "height": 400,
-            "data": {
-                "url": "migration_reason.csv"
-            }, 
-            "params": [
-                {
-                    "name": "state_selection",
-                    "value": "Australia",
-                    "bind": {
-                        "input": "select",
-                        "name": "State",
-                        "options": ["Australia", "Victoria", "New South Wales", "Western Australia", "South Australia", "Northern Territory", "Queensland", "Australian Capital Territory", "Tasmania"]
-                    }
-                }
-            ],
-            "layer": [
-                {
-                    "mark": "bar",
-                    "encoding": {
-                        "x": {
-                            "field": "year",
-                            "timeunit": "year",
-                            "type": "ordinal",
-                            "axis": {
-                                "title": "Year"
-                            },
-                            "scale": {
-                                "domain": {
-                                    "param": "time_brush"
-                                }
-                            }
-                        },
-                        "y": {
-                            "field": "amount",
-                            "type": "quantitative"
-                        },
-                        "color": {
-                            "field": "reason",
-                            "type": "nominal",
-                            "legend": {
-                                "title": "Reason for arriving in Australia"
-                            }
-                        }
-                    }
-                }
-            ]
         }
     ]
 }
