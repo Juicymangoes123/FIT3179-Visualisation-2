@@ -194,7 +194,7 @@
                                 "title": "Year"
                             },
                             {
-                                "field": "state",
+                                "field": "State",
                                 "type": "nominal",
                                 "title": "State"
                             },
@@ -202,6 +202,12 @@
                                 "field": "reason",
                                 "type": "nominal",
                                 "title": "Reason"
+                            },
+                            {
+                                "field": "amount",
+                                "type": "quantitative",
+                                "title": "Number",
+                                "format": ","
                             }
                         ]
                     }
