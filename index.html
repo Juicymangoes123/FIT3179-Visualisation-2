@@ -16,16 +16,15 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
 </head>
 
-<body class="my-bg">
+<body class="html">
      <div class="pure-g">
           <h1 id="title"> Patterns of migration in Australia </h1>
-
      </div>
      <div class="pure-g">
 
-          <div class="pure-2-4">
+          <div class="pure-u-1-2">
 
-               <div id="choropleth_map", class="chart">
+               <div id="choropleth_map" , class="chart">
 
                     <script type="text/javascript">
                          var spec1 = "choropleth_map.vg.json";
@@ -33,15 +32,47 @@
                     </script>
 
 
-               </div>
 
-               <!-- <div id="animated_choropleth_map"></div>
+                    <!-- <div id="animated_choropleth_map"></div>
 
                <script type="text/javascript">
                     var spec4 = "animated_choropleth_map.vg.json";
                     vegaEmbed("#animated_choropleth_map", spec4).then(function (results) { }).catch(console.error);
                </script> -->
 
+               </div>
+          </div>
+          <div class="pure-u-1-2">
+               <div class="chart_info" , id="right-text">
+                    <p>
+                         To investigate any patterns of migration in Australia, we first see how what percentage of
+                         international permanent arrivals each state took over the time period 2022-23.
+                         Rather unsurprisingly, the two most populous states of Victoria and New South Wales received
+                         the most international arrivals, with 32% and 34% respectively.
+                         As we can see from the line graph below, most of these permanent arrivals are skilled workers,
+                         while another large category is for family reasons.
+                    </p>
+                    <p>
+                         An interesting observation is the rapid rise in skilled permanent labour in the Northern
+                         Territory. This is no coincidence. In fact, in 2015, the Territory Government introduced
+                         a new policy called the "Designated Area Migration Agreement" (DAMA), in an attempt to address
+                         labour shortages in industries such as dentistry, nursing, and more recently, software
+                         engineers and teachers. Lasting from 2015 to 2019, this agreement saw over 280 employers be
+                         granted access to temporary skilled labourers,
+                         with an accelerated process to permanent residency. In late 2023, this agreement has been
+                         further renewed for 2024, and negotiations are underway for another renewal.
+                    </p>
+
+                    <p>
+                         Another interesting observation has been each state's response to the drop in migration due to
+                         the COVID-19 pandemic. Whereas some states like Victoria have mostly
+                         returned to pre-pandemic levels of migration, other states such as Western Australia have not
+                         returned to a historical average level of overseas migration. This has led to skilled worker
+                         shortages and has seen the WA government move to address the issue. In a deal with the Federal
+                         government, roughly 10,000 skilled migration places have been allocated to WA in the financial
+                         year 2024-25.
+                    </p>
+               </div>
           </div>
      </div>
 
@@ -49,7 +80,7 @@
 
           <div class="pure-2-4">
 
-               <div id="line_graph", class="chart">
+               <div id="line_graph" , class="chart">
                     <script type="text/javascript">
                          var spec = "line_graph.vg.json";
                          vegaEmbed("#line_graph", spec).then(function (results) { }).catch(console.error);
@@ -68,12 +99,21 @@
           </div>
      </div>
      <div class="pure-g">
-          <div id="dot_map", class="chart">
-
-          <script type="text/javascript">
-               var spec5 = "dot_map.vg.json";
-               vegaEmbed("#dot_map", spec5).then(function (results) { }).catch(console.error);
-          </script>
+          <div class="pure-u-1-2">
+               <div id="dot_map" , class="chart">
+                    <script type="text/javascript">
+                         var spec5 = "dot_map.vg.json";
+                         vegaEmbed("#dot_map", spec5).then(function (results) { }).catch(console.error);
+                    </script>
+               </div>
+          </div>
+          <div class="pure-u-1-2">
+               <div class="chart_info", id="right-text-2">
+                    <p>
+                         Turning our attention now to temporary migration, we investigate the levels of international students entering Australia over a short period of time.
+                         Australia is internationally known for its universities and education. This is 
+                    </p>
+               </div>
           </div>
      </div>
 

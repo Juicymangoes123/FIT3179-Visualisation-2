@@ -4,6 +4,8 @@
 }
 html,body {
     background-color: aqua;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .pure-g {
@@ -41,5 +43,16 @@ h1 {
     margin: 1px;
     padding: 1px;
     background: lightblue;
+}
 
+.chart_info {
+    padding-left: var(--left-padding);
+}
+
+#right-text {
+    padding-right: 200px;
+}
+
+#right-text-2 {
+    padding-left: var(--left-padding);
 }

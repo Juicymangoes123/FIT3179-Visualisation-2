@@ -100,11 +100,11 @@
                     "filter": "datum.Year==year_slider"
                 },
                 {
-                    "filter": "datum.Commencement>301"
+                    "filter": "datum.Commencement>500"
                 }
             ],
             "mark": {
-                "type": "point",
+                "type": "circle",
                 "opacity": 0.2
             },
             "encoding": {
@@ -118,7 +118,13 @@
                 },
                 "size": {
                     "field": "Commencement",
-                    "type": "quantitative"
+                    "type": "quantitative",
+                    "scale": {
+                        "rangeMax": 1000,
+                        "rangeMin": 500,
+                        "domainMin": 4,
+                        "domainMax": 123045
+                    }
                 },
                 "tooltip": [
                     {

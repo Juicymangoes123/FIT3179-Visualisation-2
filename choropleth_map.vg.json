@@ -1,13 +1,15 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 450,
+    "width": 600,
+    "height": 400,
     "title": "Patterns of migration into Australia in 2022-23 (estimates)",
     "projection": {
         "type": "equirectangular"
     },
     "layer": [
+        
         {
+
             "data": {
                 "url": "au-states.topojson",
                 "format": {
@@ -24,13 +26,14 @@
                         },
                         "key": "State",
                         "fields": [
-                            "Y2018_19",
-                            "Y2017_18_total"
+                            "Y2021_22",
+                            "Y2021_22_total",
+                            "State"
                         ]
                     }
                 },
                 {
-                    "calculate": "datum.Y2018_19/datum.Y2017_18_total * 100",
+                    "calculate": "datum.Y2021_22/datum.Y2021_22_total * 100",
                     "as": "% of annual national migration"
                 }
             ],
@@ -60,10 +63,14 @@
                 },
                 "tooltip": [
                     {
-                        "field": "Y2018_19"
+                        "field": "State",
+                        "type": "nominal",
+                        "title": "State"
                     },
                     {
-                        "field": "Y2017_18_total"
+                        "field": "% of annual national migration",
+                        "type": "quantitative",
+                        "format": ".2f"
                     }
                 ]
             }
@@ -78,7 +85,23 @@
             },
             "mark": {
                 "type": "geoshape",
-                "stroke": "dimgrey"
+                "stroke": "darkgrey",
+                "fill": null
+            }
+        },
+        {
+            "data": {
+                "url": "au-states.topojson",
+                "format": {
+                    "type": "topojson",
+                    "feature": "ne_10m_admin_1_states_provinces"
+                }
+            },
+            "mark": {
+                "type": "geoshape",
+                "fill": null,
+                "stroke": "black",
+                "strokeWidth": 1.2
             }
         }
     ]
