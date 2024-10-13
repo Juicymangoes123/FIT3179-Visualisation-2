@@ -5,30 +5,49 @@
     "title": "dot map sa4",
     "params": [
         {
-            "name": "zoom_level",
-            "value": 10000,
+            "name": "year_slider",
+            "value": 2018,
             "bind": {
                 "input": "range",
-                "min": 3500,
-                "max": 30000,
+                "min": 2018,
+                "max": 2021,
+                "step": 1,
+                "name": "Year: "
+            }
+        },
+        {
+            "name": "zoom_level",
+            "value": 700,
+            "bind": {
+                "input": "range",
+                "min": 700,
+                "max": 300000,
                 "step": 100,
                 "name": "Zoom: "
             }
         },
         {
             "name": "center_to",
-            "value": [145,-37.95],
+            "value": [137,-26],
             "bind": {
                 "input": "select",
                 "options": [
-                    [145, -37.95],
-                    [151, -33.5],
-                    [153, -27.55]
+                    [132, -29],
+                    [145, -37.90],
+                    [151.2073, -33.8708],
+                    [153, -27.55],
+                    [138, -34.93],
+                    [115.8617, -31.9514],
+                    [130.844, -12.46]
                 ],
                 "labels": [
-                    "Melbourne CBD",
-                    "Sydney CBD",
-                    "Brisbane CBD"
+                    "Australia",
+                    "Melbourne",
+                    "Sydney",
+                    "Brisbane",
+                    "Adelaide",
+                    "Perth",
+                    "Darwin"
                 ],
                 "name": "Centre to: "
             }
@@ -78,7 +97,7 @@
                     }
                 },
                 {
-                    "filter": "datum.Year==2021"
+                    "filter": "datum.Year==year_slider"
                 },
                 {
                     "filter": "datum.Commencement>301"
@@ -104,7 +123,8 @@
                 "tooltip": [
                     {
                         "field": "SA4_NAME_2021",
-                        "type": "nominal"
+                        "type": "nominal",
+                        "title": "Area name"
                     },
                     {
                         "field": "Year",
