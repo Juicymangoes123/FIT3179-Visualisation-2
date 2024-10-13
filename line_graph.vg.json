@@ -7,7 +7,7 @@
             "value": "Victoria",
             "bind": {
                 "input": "select",
-                "name": "State",
+                "name": "State: ",
                 "options": [
                     "Victoria",
                     "New South Wales",
@@ -21,9 +21,9 @@
             }
         }
     ],
-    "vconcat": [
+    "hconcat": [
         {
-            "width": 800,
+            "width": 600,
             "height": 400,
             "data": {
                 "url": "overseas_migration.csv"
@@ -41,10 +41,10 @@
                     },
                     "encoding": {
                         "x": {
-                            "value": 650
+                            "value": 450
                         },
                         "x2": {
-                            "value": 745
+                            "value": 545
                         },
                         "y": {
                             "value": 0
@@ -61,7 +61,7 @@
                             "value": "COVID-19 affected"
                         },
                         "x": {
-                            "value": 697
+                            "value": 497
                         },
                         "y": {
                             "value": 10
@@ -121,7 +121,7 @@
             ]
         },
         {
-            "width": 800,
+            "width": 600,
             "height": 400,
             "title": "Reasons for migration into Australia",
             "data": {
@@ -214,5 +214,6 @@
                 }
             ]
         }
-    ]
+    ],
+    "spacing": 300
 }
