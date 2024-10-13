@@ -10,46 +10,77 @@
      <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
      <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
 
+     <link rel="stylesheet" href="styles.css" media="all">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
+          integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
 </head>
 
-<body>
+<body class="my-bg">
+     <div class="pure-g">
+          <h1 id="title"> Patterns of migration in Australia </h1>
 
-     <p id="title"> Patterns of migration in Australia </p>
+     </div>
+     <div class="pure-g">
 
-     <div id="animated_choropleth_map"></div>
+          <div class="pure-2-4">
 
-     <script type="text/javascript">
-          var spec4 = "animated_choropleth_map.vg.json";
-          vegaEmbed("#animated_choropleth_map", spec4).then(function (results) { }).catch(console.error);
-     </script>
+               <div id="choropleth_map", class="chart">
 
-     <div id="line_graph"></div>
-     <script type="text/javascript">
-          var spec = "line_graph.vg.json";
-          vegaEmbed("#line_graph", spec).then(function (results) { }).catch(console.error);
-     </script>
+                    <script type="text/javascript">
+                         var spec1 = "choropleth_map.vg.json";
+                         vegaEmbed("#choropleth_map", spec1).then(function (results) { }).catch(console.error);
+                    </script>
 
-     <div id="choropleth_map"></div>
 
-     <script type="text/javascript">
-          var spec2 = "choropleth_map.vg.json";
-          vegaEmbed("#choropleth_map", spec2).then(function (results) { }).catch(console.error);
-     </script>
+               </div>
 
-     <!-- <div id="migration_map"></div>
+               <!-- <div id="animated_choropleth_map"></div>
+
+               <script type="text/javascript">
+                    var spec4 = "animated_choropleth_map.vg.json";
+                    vegaEmbed("#animated_choropleth_map", spec4).then(function (results) { }).catch(console.error);
+               </script> -->
+
+          </div>
+     </div>
+
+     <div class="pure-g">
+
+          <div class="pure-2-4">
+
+               <div id="line_graph", class="chart">
+                    <script type="text/javascript">
+                         var spec = "line_graph.vg.json";
+                         vegaEmbed("#line_graph", spec).then(function (results) { }).catch(console.error);
+                    </script>
+               </div>
+
+
+
+               <!-- <div id="migration_map"></div>
 
    <script type="text/javascript">
          var spec3 = "migration_map.vg.json";
          vegaEmbed("#migration_map", spec3).then(function(results) {}).catch(console.error);
    </script> -->
-     <div id="dot_map"></div>
 
-     <script type="text/javascript">
-          var spec5 = "dot_map.vg.json";
-          vegaEmbed("#dot_map", spec5).then(function (results) { }).catch(console.error);
-     </script>
+          </div>
+     </div>
+     <div class="pure-g">
+          <div id="dot_map", class="chart">
 
+          <script type="text/javascript">
+               var spec5 = "dot_map.vg.json";
+               vegaEmbed("#dot_map", spec5).then(function (results) { }).catch(console.error);
+          </script>
+          </div>
+     </div>
 
+     <div class="pure-g">
+          <p> Source: </p>
+
+     </div>
 </body>
 
 </html>

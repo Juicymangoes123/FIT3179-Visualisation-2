@@ -1,0 +1,45 @@
+:root {
+    --left-padding: 100px;
+    --top-padding: 50px;
+}
+html,body {
+    background-color: aqua;
+}
+
+.pure-g {
+    background-color: white;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    color: blue;
+}
+
+#choropleth_map {
+    width: 500;
+    height: 250;
+    padding-left: var(--left-padding);
+}
+
+#line_graph {
+    width: 500;
+    height: 250;
+    padding-left: var(--left-padding);
+    padding-top: var(--top-padding);
+}
+
+#dot_map {
+    width: 500;
+    height: 250;
+    padding-left: var(--left-padding);
+    padding-top: var(--top-padding);
+}
+
+.chart {
+    margin: 1px;
+    padding: 1px;
+    background: lightblue;
+
+}
