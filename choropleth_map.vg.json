@@ -77,10 +77,10 @@
         },
         {
             "data": {
-                "url": "au-states.topojson",
+                "url": "ne_110m_graticules_10.topojson",
                 "format": {
                     "type": "topojson",
-                    "feature": "ne_110m_graticules_30"
+                    "feature": "ne_110m_graticules_10"
                 }
             },
             "mark": {

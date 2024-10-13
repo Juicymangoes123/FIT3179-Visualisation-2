@@ -142,6 +142,20 @@
                     }
                 ]
             }
+        },
+        {
+            "data": {
+                "url": "ne_110m_graticules_10.topojson",
+                "format": {
+                    "type": "topojson",
+                    "feature": "ne_110m_graticules_10"
+                }
+            },
+            "mark": {
+                "type": "geoshape",
+                "stroke": "darkgrey",
+                "fill": null
+            }
         }
     ]
 }
