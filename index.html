@@ -14,6 +14,17 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css"
           integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/grids-responsive-min.css" />
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+
 </head>
 
 <body class="html">
@@ -24,7 +35,7 @@
 
           <div class="pure-u-1-2">
 
-               <div id="choropleth_map" , class="chart">
+               <div id="choropleth_map">
 
                     <script type="text/javascript">
                          var spec1 = "choropleth_map.vg.json";
@@ -45,7 +56,7 @@
           <div class="pure-u-1-2">
                <div class="chart_info" , id="right-text">
                     <p>
-                         To investigate any patterns of migration in Australia, we first see how what percentage of
+                         To investigate any patterns of migration in Australia, we first see how the percentage of
                          international permanent arrivals each state took over the time period 2022-23.
                          Rather unsurprisingly, the two most populous states of Victoria and New South Wales received
                          the most international arrivals, with 32% and 34% respectively.
@@ -100,7 +111,7 @@
      </div>
      <div class="pure-g">
           <div class="pure-u-1-2">
-               <div id="dot_map" , class="chart">
+               <div id="dot_map">
                     <script type="text/javascript">
                          var spec5 = "dot_map.vg.json";
                          vegaEmbed("#dot_map", spec5).then(function (results) { }).catch(console.error);
@@ -108,10 +119,23 @@
                </div>
           </div>
           <div class="pure-u-1-2">
-               <div class="chart_info", id="right-text-2">
+               <div class="chart_info" , id="right-text-2">
                     <p>
-                         Turning our attention now to temporary migration, we investigate the levels of international students entering Australia over a short period of time.
-                         Australia is internationally known for its universities and education. This is 
+                         Turning our attention now to temporary migration, we investigate the levels of international
+                         students entering Australia over a short period of time.
+                         The proportional symbol map on the left shows the number of international students that each
+                         university accepted. Universities have been grouped by their ABS statistical area level 4
+                         (SA4).
+                         An example would be University of Melbourne, which would be in the region of "Melbourne -
+                         inner".
+                         Australia is internationally known for its universities and education. This is reflect in the
+                         concentration of international students around major capital city hubs.
+                         For instance, we see that in 2018, an inner Melbourne university accepted 101,522 international
+                         students, while an inner south Sydney university accepted 119,212 international students in
+                         2018.
+                         This demonstrates the importance of international students not only on the livelihoods of
+                         businesses in major capital hubs, but also in smaller regional hubs, like Townsville and
+                         Cairns.
                     </p>
                </div>
           </div>
@@ -123,7 +147,9 @@
                <br> https://internationaleducation.gov.au/research/datavisualisations/Pages/region.aspx </br>
                <br>https://www.abs.gov.au/statistics/people/population/overseas-migration/2022-23-financial-year</br>
                <br>https://psnews.com.au/federal-government-announces-extension-to-northern-territory-migration-agreement/123260/</br>
-               <br> https://insiderguides.com.au/australias-2024-2025-skilled-migration-program-a-breakdown-by-state-and-territory/ </br>
+               <br>
+               https://insiderguides.com.au/australias-2024-2025-skilled-migration-program-a-breakdown-by-state-and-territory/
+               </br>
           </p>
 
      </div>
